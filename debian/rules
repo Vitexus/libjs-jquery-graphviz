@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+BUILD_DIR=debian/build
+DH_LINKS_FILE=links
+
+override_dh_auto_build:
+	mkdir -p $(BUILD_DIR)
+	yui-compressor source/jquery.graphviz.js >  $(BUILD_DIR)/jquery.graphviz.min.js
+	yui-compressor source/jquery.graphviz.css > $(BUILD_DIR)/jquery.graphviz.min.css
+	dh_auto_build
+
+override_dh_auto_clean:
+	rm -f $(DH_LINKS_FILE)
+	rm -rf $(BUILD_DIR)
+	dh_auto_clean
+
+%:
+	dh $@
+

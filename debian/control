@@ -1,0 +1,18 @@
+Source: libjs-jquery-graphviz
+Build-Depends: debhelper (>= 7.0.50~), yui-compressor
+Standards-Version: 3.8.4
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Priority: optional
+Homepage: https://github.com/Vitexus/libjs-jquery-graphviz
+
+Package: libjs-jquery-graphviz
+Architecture: all
+Depends: ${misc:Depends},libjs-twitter-bootstrap (>= 3.0)
+Suggests: php-image-graphviz
+Section: web
+Description: Animate a svg generated with graphviz
+ With this plugin you can move (click and drag and drop) and remove 
+ (double click on a node or on a edge) the nodes and the edges of a 
+ graph created with graphviz
+

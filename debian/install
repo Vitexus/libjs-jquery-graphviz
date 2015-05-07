@@ -1,0 +1,5 @@
+source/*.js     /usr/share/javascript/
+debian/build/*.js     /usr/share/javascript/
+source/*.css    /usr/share/javascript/
+debian/build/*.css    /usr/share/javascript/
+
